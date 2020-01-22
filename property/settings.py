@@ -33,6 +33,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'finder',
     'allauth',
+    'rest_framework',
     'allauth.account',
     'allauth.socialaccount',
     'pyuploadcare.dj',

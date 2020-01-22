@@ -19,5 +19,6 @@ from django.conf.urls import url
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('', include('finder.urls'))
+    url('', include('finder.urls')),
+    url(r'accounts/', include('allauth.urls'))
 ]
