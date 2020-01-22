@@ -14,8 +14,23 @@
     {%block content%}
     <div class="container">
         <div class="row">
-            <p>this is home</p>
+            <div class="col-md-6">
+                <form action="save" method="post">
+                    {% csrf_token %}
+                    {% bootstrap_form form%}
+                    <button class="btn = btn-primary btn-sm" value = "Save">Save</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                {%for property in properties%}
+                    <div class="card">
+                        <div class="card-body">{{property.name}}</div>
+                        <div class="card-footer"></div>
+                    </div>
+                {%endfor%}
+            </div>
         </div>
+        
     </div>
     {%endblock%}
 </body>

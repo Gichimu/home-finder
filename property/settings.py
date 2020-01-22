@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'finder',
     'allauth',
     'rest_framework',
+    'rest_framework.authtoken',
     'allauth.account',
     'allauth.socialaccount',
     'pyuploadcare.dj',
@@ -117,7 +118,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
 # Internationalization
 # https://docs.djangoproject.com/en/2.2/topics/i18n/
 
@@ -151,3 +156,5 @@ SOCIALACCOUNT_PROVIDERS = {
         
     }
 }
+
+# APPEND_SLASH = False
